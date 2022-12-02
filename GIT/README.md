@@ -1,2 +1,0 @@
-# Explorer
- Estudos do explorer
