@@ -1,0 +1,131 @@
+/* O seletor universal (*) aplica estilos a elementos de qualquer tipo.*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* O box-sizing com o valor border-box faz com que o navegador não calcule a dimensão de um elemento somando bordas e margens com altura e largura*/
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  font-size: 62.5%; /* 10px */
+}
+
+/* body é todo o corpo da pagina */
+body {
+  font-family: 'epilogue', sans-serif;
+  
+  /* background é um atalho para definir os valores de fundo individuais em um único lugar na folha de estilo*/
+  background: #ECE9FD;
+
+  padding: 6.0rem 2.3rem 6.6rem;
+  font-size: 1.6rem;
+}
+/* A rem ("root em") é o tamanho de fonte do elemento-raiz do documento.
+Diferentemente do em , que pode ser diferente para cada elemento, 
+o rem é constante em todo o documento. Outras unidades em desenvolvimento permitem especificar tamanhos relativos à janela do leitor.
+São a vw e vh . */
+main {
+  max-width: 33.0rem;
+  margin: 0 auto;
+}
+
+
+h1 {
+  font-weight: 800;
+  font-size: 4.0rem;
+  line-height: 4.8rem;
+
+  color: #090039;
+
+  margin-bottom: 1.5rem;
+}
+
+main p:first-child {
+  color: #7158ef;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 3.2rem;
+
+  margin-bottom: 1.7rem;
+}
+
+h1 + p {
+  color: rgb(10,  0, 57, 0.64);
+  line-height: 3.2rem;
+
+  margin-bottom: 3.2rem;
+}
+
+a {
+  color: #090039;
+
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7158ef;
+  font-weight: bold;
+}
+
+ul {
+  margin-top: 7.2rem;
+}
+
+ul li {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+
+  color: #090039;
+
+  width: 25.7rem;
+
+  display: flex;
+  gap: 3.8rem;
+}
+
+
+ul li + li {
+  margin-top: 3.2rem;
+}
+
+ul li span {
+  font-weight: 800;
+  font-size: 7.2rem;
+  line-height: 8.0rem;
+  letter-spacing: -2px;
+
+  color: #090039;
+}
+
+/*@media funciona para você determinar um estilo CSS para cada tipo de mídia que te interessar.
+Os mais comuns de se ver são os @media screen e @media print ,
+um é para determinas o CSS para telas e o outro para determinar um CSS apenas quando for imprimir a página. */
+
+@media (min-width: 700px) {
+  
+  body {
+    padding: 8rem;
+  }
+  
+  main {
+    max-width: 1020px;
+    display: flex;
+    gap: 10rem;
+  }
+
+  main > div {
+    max-width: 484px;
+  }
+
+  ul li {
+    gap: 5.3rem;
+    max-width: 450px;
+    align-items: center;
+  }
+
+}
